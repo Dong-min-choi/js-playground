@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gugudan 7</title>
+</head>
+<body>
+    <h1>if 문 사용해 보기</h1>
+    <script>
+        var n=Number(prompt("출력할 단을 입력해 주세요."));
+        if(n<2 || n>9){
+            console.log("2 이상, 9 이하의 값만 입력할 수 있습니다.")
+           }
+     else{  
+           for(var i=1; i<=9; i++){        
+            console.log(n + "*" + i + " = " + n * i );
+           }
+        }
+    </script>
+
+</body>
+</html>
