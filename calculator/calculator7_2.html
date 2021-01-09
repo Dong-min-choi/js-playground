@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>문자열 계산기 구현하기</h1>
+    
+    <div>
+        <input type="text" id="input">
+        <button onclick = "calc()">계산</button>
+    </div>
+    <div id="output">결과가 여기에 나옵니다.</div>
+    <script>
+        var input = {};
+
+        input.init = function(str){ 
+            this.list = str.split(" ");
+        };
+
+        function calc(){
+            var str = document.getElementById('input').value;
+            input.init(str);
+            var a = Number(input.list[0]);
+            var result = a;
+            var calculate = input.list;
+
+            for (var i = 0; i < calculate.length ; i++){
+                if(calculate[(2 * i) + 1] === '+'){
+                    result += Number(calculate[(2*i)+2]);
+                }
+                else if(calculate[(2 * i) + 1] === '-'){
+                    result -= Number(calculate[(2*i)+2]);
+                }
+                else if(calculate[(2 * i) + 1] === '*'){
+                    result *= Number(calculate[(2*i)+2]);
+                }
+                else if(calculate[(2 * i) + 1] === '/'){
+                    result /= Number(calculate[(2*i)+2]);
+                }
+        }
+
+        var out = document.getElementById('output');
+        out.innerHTML = result;
+        }
+       
+    </script>
+</body>
+</html>
