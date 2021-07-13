@@ -15,6 +15,7 @@
       let startTime, timer;
 
       startButton.onclick = start; //start 버튼 활성화
+      resetButton.onclick = reset; //reset 버튼 활성화
 
       function start() {
         startButton.onclick = null;	// start 버튼 비활성화
@@ -33,7 +34,7 @@
         startButton.onclick = start;
       }
 
-      resetButton.onclick = function () {
+      function reset(){
         display.innerHTML = "0.00";
       }
 
